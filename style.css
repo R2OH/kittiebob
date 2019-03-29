@@ -19,29 +19,36 @@ p {
 
 .blogDate {
 	color: black;
-	font-size: 32px;
-	height: auto;
-	padding-right: 20px;
-	margin: 0px;
+	font-size: 24px;
+	height: 24px;
 	text-align: right;
 }
 
 .blogImage {
 	background: url(sunflower.jpg) 50% 50% no-repeat;
+	border: 2px solid black;
 	border-radius: 25px;
 	display:inline-block;
 	float: left;
 	height: 150px;
-	margin: 20px;
+	margin: 20px 20px 20px 20px;
 	object-fit: cover;
 	width: 150px;
+}
+.blogShare {
+	float:right;
+	padding-right: 20px;
 }
 
 .blogText {
 	color: black;
-	font-size: 32px;
+	font-size: 24px;
 	text-align: justify;
-	margin: 0px 30px 30px 30px;
+	margin: 0px 20px 20px 20px;
+}
+
+.blogTitle {
+	margin: 0px;
 }
 
 .post {
@@ -51,26 +58,36 @@ p {
 	height: auto;
 	margin-bottom: 20px;
 	margin-top: 20px;
-	padding-bottom: 10px;
-	padding-top: 10px;
+	padding-bottom: 15px;
+	padding-top: 15px;
 	width: 100%
 }
 
-.responseContainer {
-	text-align: center;
-	height: auto;
-	width: auto;
-}
-
-.responseImage {
-	height: 30px;
-	width: 30px;
+.response {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	height: 60px;
+	width: 100%;
 }
 
 .roundedItem {
 	background-color: #ffffff;
 	border-radius: 25px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.social {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto;
+	height: 60px;
+	width: 100%;
+}
+
+.socialCounter {
+	align-content: center
+	height: 30px;
+	margin: auto;
+	width: 30px;
 }
 
 .socialImage {
@@ -100,6 +117,8 @@ p {
 }
 
 #kittiebobTitle {
+	margin: 0px;
+	padding: 10px;
 	text-align: center;
 }
 
@@ -107,13 +126,6 @@ p {
 	height: 60px;
 	width: 100%;
 	text-align: center;
-}
-
-#social {
-	display: grid;
-	grid-template-columns: auto auto auto auto auto auto;
-	height: 60px;
-	width: 100%;
 }
 
 #wrapper{
