@@ -45,40 +45,6 @@
 		</div>
 
 		<div id="content">
-			<!--START BLOG POST TEMPLATE
----------------------------------------------------------------------
-				<div id="" class='post'>
-
-				<h1 class="blogTitle">untitled</h1>
-
-				<p class="blogDate"></p>
-
-				<img src="src/blogImages/.jpg" class="blogImage addBorder">
-
-				<p class="blogText"></p>
-
-				<p class="blogText"></p>
-
-
-				<div class="response">
-
-					<a id="" class="socialLink" href="">
-						<img class="socialImage" src="src/icons/icons8-applause-50.png" alt="Clap Button" >
-					</a>
-
-					<a id="" class="socialLink" href="">
-						<img class="socialImage" src="src/icons/icons8-comments-50.png" alt="Comment Button">
-					</a>
-					
-					<a class="socialLink" href="">
-						<img class="socialImage" src="src/icons/icons8-share-50.png">
-					</a>
-
-				</div>
-						
-			</div>
----------------------------------------------------------------------
-			END BLOG POST TEMPLATE-->
 
 				<div id="" class='post'>
 
@@ -93,17 +59,11 @@
 
 				<div class="response">
 
-					<a id="" class="socialLink" href="">
-						<img class="socialImage" src="src/icons/icons8-applause-50.png" alt="Clap Button" >
-					</a>
-
-					<a id="" class="socialLink" href="">
-						<img class="socialImage" src="src/icons/icons8-comments-50.png" alt="Comment Button">
-					</a>
-					
-					<a class="socialLink" href="">
-						<img class="socialImage" src="src/icons/icons8-share-50.png">
-					</a>
+					<img class="socialLink socialImage" src="src/icons/icons8-applause-50.png" alt="Clap Button"/>
+				
+					<img class="socialLink socialImage" src="src/icons/icons8-comments-50.png" alt="Comment Button"/>
+		
+					<img class="socialLink socialImage" src="src/icons/icons8-share-50.png"/>
 
 				</div>
 						
@@ -116,7 +76,7 @@
 
 				<p class="blogDate">march 15, 2019</p>
 
-				<img src="src/blogImages/sunflower.jpg" class="blogImage">
+				<img src=".\src\blogImages\sunflower.jpg" class="blogImage">
 
 				<p class="blogText">(sample text) Helianthus or sunflower (/ˌhiːliˈænθəs/)[2] is a genus of plants comprising about 70 species.[3][4] Except for three species in South America, all Helianthus species are native to North America. The common name, "sunflower", typically refers to the popular annual species Helianthus annuus, or the common sunflower, whose round flower heads in combination with the ligules look like the sun.[5] This and other species, notably Jerusalem artichoke (H. tuberosus), are cultivated in temperate regions and some tropical regions as food crops for humans, cattle, and poultry, and as ornamental plants.[6]</p>
 
@@ -125,17 +85,11 @@
 				<!-- Clap, Comment, and Share buttons and counters-->
 				<div class="response">
 
-					<a id="" class="socialLink" href="">
-						<img class="socialImage" src="src/icons/icons8-applause-50.png" alt="Clap Button" >
-					</a>
-
-					<a id="" class="socialLink" href="">
-						<img class="socialImage" src="src/icons/icons8-comments-50.png" alt="Comment Button">
-					</a>
-					
-					<a class="socialLink" href="">
-						<img class="socialImage" src="src/icons/icons8-share-50.png">
-					</a>
+					<img class="socialLink socialImage" src="src/icons/icons8-applause-50.png" alt="Clap Button"/>
+				
+					<img class="socialLink socialImage" src="src/icons/icons8-comments-50.png" alt="Comment Button"/>
+		
+					<img class="socialLink socialImage" src="src/icons/icons8-share-50.png"/>
 
 				</div>
 						
@@ -156,17 +110,11 @@
 				<!-- Clap, Comment, and Share buttons and counters-->
 				<div class="response">
 
-					<a id="" class="socialLink" href="">
-						<img class="socialImage" src="src/icons/icons8-applause-50.png" alt="Clap Button" >
-					</a>
-
-					<a id="" class="socialLink" href="">
-						<img class="socialImage" src="src/icons/icons8-comments-50.png" alt="Comment Button">
-					</a>
-					
-					<a class="socialLink" href="">
-						<img class="socialImage" src="src/icons/icons8-share-50.png">
-					</a>
+					<img class="ex socialLink socialImage" src="src/icons/icons8-applause-50.png" alt="Clap Button"/>
+				
+					<img class="socialLink socialImage" src="src/icons/icons8-comments-50.png" alt="Comment Button"/>
+		
+					<img class="socialLink socialImage" src="src/icons/icons8-share-50.png"/>
 
 				</div>
 
@@ -174,12 +122,27 @@
 
 		</div>
 	</div>
-<!--
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-	$(document).ready(function() {
 
+<script src="https://code.jquery.com/jquery-3.1.1.js">
+</script>
+<script>
+	$(document).ready(function(){
+
+
+		$('.ex').click(function () {
+
+			var Clap = $(this).attr('src');
+
+			if ( Clap === 'src/icons/icons8-applause-50.png' ) {
+		    	$(this).attr('src', 'src/icons/icons8-applause-filled-50.png');
+		  	}
+
+		  	if ( Clap === 'src/icons/icons8-applause-filled-50.png' ) {
+		    	$(this).attr('src', 'src/icons/icons8-applause-50.png');
+			}
+		});
 	});
 </script>
--->
+
 </body>
 </html>
