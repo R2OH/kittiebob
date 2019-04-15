@@ -12,8 +12,6 @@
 			<div id="kittiebobWritten">
 				<h1 id="kittiebobTitle">kittiebob</h1>
 			</div>
-			<!--Shop Slideshow will go here-->
-
 			<!--Links to social media-->
 			<div class="social">
 
@@ -46,7 +44,7 @@
 
 		<div id="content">
 
-				<div id="" class='post'>
+			<div id="post3" class='post'>
 
 				<h1 class="blogTitle">untitled</h1>
 
@@ -59,14 +57,20 @@
 
 				<div class="response">
 
-					<img class="socialLink socialImage" src="src/icons/icons8-applause-50.png" alt="Clap Button"/>
+					<div class="socialCounter">0</div>
+
+					<img data-panelId="post3ClapBack" class="responseButton socialLink socialImage" src="src/icons/icons8-applause-50.png" alt="Clap Button"/>
+
+					<div class="socialCounter">0</div>
 				
-					<img class="socialLink socialImage" src="src/icons/icons8-comments-50.png" alt="Comment Button"/>
+					<img data-panelId="post3Comment" class="responseButton socialLink socialImage" src="src/icons/icons8-comments-50.png" alt="Comment Button"/>
+
+					<div class="socialCounter">0</div>
 		
-					<img class="socialLink socialImage" src="src/icons/icons8-share-50.png"/>
+					<img data-panelId="post3Share" class="responseButton socialLink socialImage" src="src/icons/icons8-share-50.png"/>
 
 				</div>
-						
+					
 			</div>			
 
 
@@ -82,14 +86,19 @@
 
 				<p class="blogText">(sample text) Perennial sunflower species are not as common in garden use due to their tendency to spread rapidly and become invasive. The whorled sunflower, H. verticillatus, was listed as an endangered species in 2014 when the U.S. Fish and Wildlife Service issued a final rule protecting it under the Endangered Species Act. The primary threats are industrial forestry and pine plantations in Alabama, Georgia, and Tennessee. They grow to 1.8 m (6 ft) and are primarily found in woodlands, adjacent to creeks and moist, prairie-like areas.[7]</p>
 
-				<!-- Clap, Comment, and Share buttons and counters-->
 				<div class="response">
 
-					<img class="socialLink socialImage" src="src/icons/icons8-applause-50.png" alt="Clap Button"/>
+					<div class="socialCounter">0</div>
+
+					<img data-panelId="post2ClapBack" class="responseButton socialLink socialImage" src="src/icons/icons8-applause-50.png" alt="Clap Button"/>
+
+					<div class="socialCounter">0</div>
 				
-					<img class="socialLink socialImage" src="src/icons/icons8-comments-50.png" alt="Comment Button"/>
+					<img data-panelId="post2Comment" class="responseButton socialLink socialImage" src="src/icons/icons8-comments-50.png" alt="Comment Button"/>
+
+					<div class="socialCounter">0</div>
 		
-					<img class="socialLink socialImage" src="src/icons/icons8-share-50.png"/>
+					<img data-panelId="post2Share" class="responseButton socialLink socialImage" src="src/icons/icons8-share-50.png"/>
 
 				</div>
 						
@@ -107,42 +116,107 @@
 
 				<p class="blogText">(sample text) Chocolate is one of the most popular food types and flavors in the world, and many foodstuffs involving chocolate exist, particularly desserts, including cakes, pudding, mousse, chocolate brownies, and chocolate chip cookies. Many candies are filled with or coated with sweetened chocolate, and bars of solid chocolate and candy bars coated in chocolate are eaten as snacks. Gifts of chocolate molded into different shapes (such as eggs, hearts, coins) are traditional on certain Western holidays, including Christmas, Easter, Valentine's Day, and Hanukkah. Chocolate is also used in cold and hot beverages, such as chocolate milk and hot chocolate, and in some alcoholic drinks, such as creme de cacao.</p>
 
-				<!-- Clap, Comment, and Share buttons and counters-->
 				<div class="response">
 
-					<img class="ex socialLink socialImage" src="src/icons/icons8-applause-50.png" alt="Clap Button"/>
+					<div class="socialCounter">0</div>
+
+					<img data-panelId="post1ClapBack" class="responseButton socialLink socialImage" src="src/icons/icons8-applause-50.png" alt="Clap Button"/>
+
+					<div class="socialCounter">0</div>
 				
-					<img class="socialLink socialImage" src="src/icons/icons8-comments-50.png" alt="Comment Button"/>
+					<img data-panelId="post1Comment" class="responseButton socialLink socialImage" src="src/icons/icons8-comments-50.png" alt="Comment Button"/>
+
+					<div class="socialCounter">0</div>
 		
-					<img class="socialLink socialImage" src="src/icons/icons8-share-50.png"/>
+					<img data-panelId="post1Share" class="responseButton socialLink socialImage" src="src/icons/icons8-share-50.png"/>
 
 				</div>
 
 			</div>
 
 		</div>
+
 	</div>
 
-<script src="https://code.jquery.com/jquery-3.1.1.js">
-</script>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 <script>
 	$(document).ready(function(){
 
+//Toggles image sources and adds 1 to adjacent counter
+		$('.responseButton').click(function () {
 
-		$('.ex').click(function () {
+			var panelId = $(this).attr('src');
+			var applause = 'src/icons/icons8-applause-50.png'
+			var applauseFilled = 'src/icons/icons8-applause-filled-50.png'
+			var comments = 'src/icons/icons8-comments-50.png'
+			var commentsFilled = 'src/icons/icons8-comments-filled-50.png'
+			var share = 'src/icons/icons8-share-50.png'
 
-			var Clap = $(this).attr('src');
+			if ( panelId == applause ) {
 
-			if ( Clap === 'src/icons/icons8-applause-50.png' ) {
-		    	$(this).attr('src', 'src/icons/icons8-applause-filled-50.png');
-		  	}
+				$(this).attr('src', applauseFilled);
 
-		  	if ( Clap === 'src/icons/icons8-applause-filled-50.png' ) {
-		    	$(this).attr('src', 'src/icons/icons8-applause-50.png');
+				$(this).prev().text(function(i, txt) {
+				return +txt + 1;
+
+				});
+
+			}
+
+			if ( panelId == applauseFilled ) {
+				
+				$(this).attr('src', applause);
+
+				$(this).prev().text(function(i, txt) {
+				return +txt - 1;
+				});
+
+			}
+
+
+			if ( panelId == comments ) {
+
+				$(this).attr('src', commentsFilled);
+
+				$(this).prev().text(function(i, txt) {
+				return +txt + 1;
+
+				});
+
+			}
+
+			if ( panelId == commentsFilled ) {
+				
+				$(this).attr('src', comments);
+
+				$(this).prev().text(function(i, txt) {
+					return +txt - 1;
+
+				});
+
+			}
+
+			if ( panelId == share ) {
+
+				$(this).prev().text(function(i, txt) {
+					return +txt + 1;
+
+				});
+
+			}
+
+		});
+
+		$(window).resize(function() {
+			if ($(window).width() < 301) {
+				$(".blogImage").css({"float:none"})
+			}
+			else {
+				$(".blogImage").css({"float:left"})
 			}
 		});
 	});
-</script>
 
+</script>
 </body>
 </html>
