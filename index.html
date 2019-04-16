@@ -207,14 +207,13 @@
 
 		});
 
-		$(window).resize(function() {
-			if ($(window).width() < 301) {
-				$(".blogImage").css({"float:none"})
-			}
-			else {
-				$(".blogImage").css({"float:left"})
-			}
-		});
+		if ($(window).width() < 400 ) {
+			$(".blogImage").css("float:none")
+		}
+		else {
+			$(".blogImage").css("float:left")
+		}
+		
 	});
 
 </script>
