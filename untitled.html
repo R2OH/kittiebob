@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Just+Another+Hand" rel="stylesheet">
+	<title>kittiebob.com</title>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header"  class="roundedItem">
+			<a href="https://r2oh.github.io/kittiebob/"><div id="kittiebobWritten">
+				<h1 id="kittiebobTitle">kittiebob</h1>
+			</div></a>
+			<!--Links to social media-->
+			<div class="social">
+
+					<a id="facebookLink" class="socialLink" href="https://www.facebook.com/kittiebobtart">
+						<img class="socialImage" src="src/icons/icons8-facebook-50.png" alt="Link to Facebook" >
+					</a>
+
+					<a id="instagramLink" class="socialLink" href="https://www.instagram.com/kittiebob">
+						<img class="socialImage" src="src/icons/icons8-instagram-50.png" alt="Link to Instagram">
+					</a>
+
+					<a id="tumblrLink" class="socialLink" href="http://kittiebob.tumblr.com">
+						<img class="socialImage" src="src/icons/icons8-tumblr-50.png" alt="Link to Tumblr">
+					</a>
+
+					<a id="twitterLink" class="socialLink" href="https://twitter.com/thekittiebob">
+						<img class="socialImage" src="src/icons/icons8-twitter-50.png" alt="Link to Twitter" alt="Link to twitter">
+					</a>
+
+					<a id="youtubeLink" class="socialLink" href="https://www.youtube.com/kittiebob">
+						<img class="socialImage" src="src/icons/icons8-youtube-squared-50.png" alt="Link to YoutTube">
+					</a>
+
+					<a id="searchBar" class="socialLink" href="index.html">
+						<img class="socialImage" src="src/icons/icons8-pricing-50.png" alt="Search">
+					</a>
+			</div>
+
+		</div>
+
+		<div id="content">
+
+			<div id="post3" class='post'>
+
+				<h1 class="blogTitle">untitled</h1>
+
+				<p class="blogDate">march 28th, 2019</p>
+
+				<img src="./src/blogImages/watercolor1.PNG" class="blogImage">
+
+				<p class="blogText">there are people making a living off of telling people how to make a living. how to live. how to make it. aside form these constant reminders of what life should be, there truly is no real answer. living how it makes sense to you and as long as it doesn't harm other people, I think is the best way to do it. but what the fuck do i know? i'm still figureing it out myself.</p>
+
+
+				<div class="response">
+
+					<div class="socialCounter">0</div>
+
+					<img id="post3ClapBack" class="responseButton socialLink socialImage" src="src/icons/icons8-applause-50.png" alt="Clap Button"/>
+
+					<div class="socialCounter">0</div>
+				
+					<img id="post3Comment" class="responseButton socialLink socialImage" src="src/icons/icons8-comments-50.png" alt="Comment Button"/>
+
+					<div class="socialCounter">0</div>
+		
+					<img id="post3Share" class="responseButton socialLink socialImage" src="src/icons/icons8-share-50.png"/>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.commentForms').hide();
+
+//Toggles image sources and adds 1 to adjacent counter
+		$('.responseButton').click(function () {
+
+			var option = $(this).attr('src');
+			var applause = 'src/icons/icons8-applause-50.png';
+			var applauseFilled = 'src/icons/icons8-applause-filled-50.png';
+			var comments = 'src/icons/icons8-comments-50.png';
+			var commentsFilled = 'src/icons/icons8-comments-filled-50.png';
+			var share = 'src/icons/icons8-share-50.png';
+
+
+			if ( option == applause ) {
+
+				$(this).attr('src', applauseFilled);
+
+				$(this).prev().text(function(i, txt) {
+				return +txt + 1;
+
+				});
+
+			}
+
+			if ( option == applauseFilled ) {
+				
+				$(this).attr('src', applause);
+
+				$(this).prev().text(function(i, txt) {
+				return +txt - 1;
+				});
+
+			}
+
+
+			if ( option == comments ) {
+
+				$(this).attr('src', commentsFilled);
+
+				$(".commentForms").show();
+
+				$(this).prev().text(function(i, txt) {
+				return +txt + 1;
+
+				});
+
+			}
+
+			if ( option == commentsFilled ) {
+				
+				$(this).attr('src', comments);
+
+				$(".commentForms").hide();
+
+				$(this).prev().text(function(i, txt) {
+					return +txt - 1;
+
+				});
+
+			}
+
+			if ( option == share ) {
+
+				$(this).prev().text(function(i, txt) {
+					return +txt + 1;
+
+				});
+
+			}
+
+		});
+		
+	});
+
+</script>
+</body>
+</html>
