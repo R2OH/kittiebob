@@ -3,6 +3,14 @@ a {
 	text-decoration: none;
 }
 
+body{
+	height: auto;
+	margin: 20px;
+	max-width: 100%;
+	min-width: 300px;
+	z-index: 0;
+}
+
 h1 {
 	font-family: "Just Another Hand", cursive;
 	letter-spacing: 8px;
@@ -144,12 +152,4 @@ p {
 	height: 60px;
 	width: 100%;
 	text-align: center;
-}
-
-#wrapper{
-	height: auto;
-	margin: 20px;
-	max-width: 100%;
-	min-width: 300px;
-	z-index: 0;
 }
