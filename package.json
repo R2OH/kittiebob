@@ -1,0 +1,28 @@
+{
+  "name": "kittiebob",
+  "version": "1.0.0",
+  "description": "blog/shop",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R2OH/kittiebob.git"
+  },
+  "keywords": [
+    "kittiebob"
+  ],
+  "author": "Arturo Cristian Gonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/R2OH/kittiebob/issues"
+  },
+  "homepage": "https://github.com/R2OH/kittiebob#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.3.4",
+    "nodemon": "^1.19.4"
+  }
+}
